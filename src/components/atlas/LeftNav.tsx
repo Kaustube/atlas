@@ -15,26 +15,26 @@ import type { AtlasFeature } from "@/data/features";
 interface NavItem {
   label: string;
   icon: LucideIcon;
-  type?: string;
+  type: string;
+  description: string;
 }
 
 const NAV: NavItem[] = [
-  { label: "Explore", icon: Compass, type: "all" },
-  { label: "Geography", icon: Globe2, type: "geography" },
-  { label: "Mountains", icon: Mountain, type: "mountain" },
-  { label: "Rivers & Lakes", icon: Waves, type: "river" },
-  { label: "Glaciers", icon: Snowflake, type: "glacier" },
-  { label: "Geology", icon: Layers3, type: "geology" },
-  { label: "Biodiversity", icon: Leaf, type: "biodiversity" },
-  { label: "Climate", icon: CloudSun, type: "climate" },
-  { label: "History & Culture", icon: Landmark, type: "culture" },
+  { label: "All Places", icon: Compass, type: "all", description: "Explore everything" },
+  { label: "Mountains", icon: Mountain, type: "mountain_peak", description: "Peaks and summits" },
+  { label: "Rivers", icon: Waves, type: "river", description: "Major river systems" },
+  { label: "Cities & Towns", icon: Landmark, type: "settlement", description: "Urban centers" },
+  { label: "Glaciers", icon: Snowflake, type: "glacier", description: "Ice formations" },
+  { label: "Protected Areas", icon: Leaf, type: "protected_area", description: "National parks" },
 ];
 
 interface LeftNavProps {
   onNavigate: (feature: AtlasFeature) => void;
+  activeCategory: string;
+  onCategoryChange: (category: string) => void;
 }
 
-export default function LeftNav({ onNavigate }: LeftNavProps) {
+export default function LeftNav({ onNavigate, activeCategory, onCategoryChange }: LeftNavProps) {
   return (
     <aside className="absolute inset-y-0 left-0 z-20 flex w-[264px] flex-col border-r border-border bg-background/80 backdrop-blur-md">
       {/* Branding */}
@@ -51,36 +51,31 @@ export default function LeftNav({ onNavigate }: LeftNavProps) {
 
       {/* Navigation */}
       <nav className="flex-1 px-3">
-        <div className="atlas-label mb-2 px-3 text-muted-foreground/70">Modules</div>
+        <div className="atlas-label mb-2 px-3 text-muted-foreground/70">Categories</div>
         <ul className="space-y-0.5">
-          {NAV.map((item, i) => {
-            const active = i === 0;
+          {NAV.map((item) => {
+            const active = activeCategory === item.type;
             return (
               <li key={item.label}>
                 <button
                   type="button"
                   aria-current={active ? "page" : undefined}
                   onClick={() => {
-                    // Trigger navigation - show first feature of this type
-                    // For now, just trigger a dummy feature to show markers
-                    onNavigate({
-                      id: `nav-${item.type}`,
-                      name: item.label,
-                      type: item.type || 'all',
-                      lat: 28.0,
-                      lng: 80.0,
-                      description: `Exploring ${item.label}`,
-                      pin: false,
-                    });
+                    onCategoryChange(item.type);
                   }}
-                  className={`relative flex w-full items-center gap-3 border-l-2 px-3 py-2 text-left text-[13px] transition-colors ${
+                  className={`group relative flex w-full items-center gap-3 border-l-2 px-3 py-2.5 text-left text-[13px] transition-all duration-200 ${
                     active
                       ? "border-accent bg-muted/50 text-foreground"
-                      : "border-transparent text-muted-foreground hover:bg-muted/30 hover:text-foreground"
+                      : "border-transparent text-muted-foreground hover:bg-muted/30 hover:text-foreground hover:border-muted-foreground/30"
                   }`}
                 >
-                  <item.icon size={15} strokeWidth={1.5} aria-hidden />
-                  {item.label}
+                  <item.icon size={16} strokeWidth={active ? 2 : 1.5} aria-hidden className="transition-all" />
+                  <div className="flex-1">
+                    <div className={active ? "font-medium" : ""}>{item.label}</div>
+                    <div className="text-[10px] text-muted-foreground/60 mt-0.5">
+                      {item.description}
+                    </div>
+                  </div>
                 </button>
               </li>
             );

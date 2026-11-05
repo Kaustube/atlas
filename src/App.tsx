@@ -1,19 +1,24 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import GlobeScene, { type GlobeLayers } from './components/globe/GlobeScene'
 import LeftNav from './components/atlas/LeftNav'
 import TopSearch from './components/atlas/TopSearch'
 import InfoPanel from './components/atlas/InfoPanel'
 import BottomControls from './components/atlas/BottomControls'
 import { type AtlasFeature } from './data/features'
+import { getFeaturesByType } from './lib/loadAtlasData'
 
 function App() {
   const [selectedFeature, setSelectedFeature] = useState<AtlasFeature | null>(null)
+  const [activeCategory, setActiveCategory] = useState<string>('all')
   const [style, setStyle] = useState<'terrain' | 'satellite'>('satellite')
   const [layers, setLayers] = useState<GlobeLayers>({
     borders: true,
     elevation: true,
     grid: true,
   })
+
+  // Filter features by active category
+  const showMarkers = activeCategory !== 'none'
 
   // Default view - Start with a nice angle showing India/Himalayas
   const defaultView: AtlasFeature = {
@@ -30,17 +35,23 @@ function App() {
 
   const handleSelect = (f: AtlasFeature) => {
     setSelectedFeature(f)
+    setActiveCategory('all') // Show all markers when a feature is selected
+  }
+
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category)
+    setSelectedFeature(null) // Clear selection when changing categories
   }
 
   return (
     <div className="relative h-screen w-screen select-none overflow-hidden bg-background font-sans text-foreground">
-      {/* Globe - shows markers ONLY when feature selected */}
+      {/* Globe - shows markers based on active category */}
       <GlobeScene 
         selected={displayFeature} 
         onSelect={handleSelect} 
         layers={layers} 
         style={style}
-        showMarkers={selectedFeature !== null}
+        showMarkers={showMarkers}
       />
 
       {/* Soft vignette */}
@@ -48,7 +59,11 @@ function App() {
 
       {/* Interface */}
       <TopSearch onSelect={handleSelect} />
-      <LeftNav onNavigate={handleSelect} />
+      <LeftNav 
+        onNavigate={handleSelect} 
+        activeCategory={activeCategory}
+        onCategoryChange={handleCategoryChange}
+      />
       {selectedFeature && <InfoPanel feature={selectedFeature} onSelect={handleSelect} />}
       <BottomControls
         style={style}

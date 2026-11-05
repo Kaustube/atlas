@@ -1,344 +1,318 @@
-# ATLAS �
+# ATLAS - Interactive 3D Geospatial Explorer
 
-**Interactive 3D Geospatial Exploration Platform**
+> **A production-ready 3D web application for exploring geographical features across India, Nepal, and the Himalayan region**
 
-> A production-ready geographical information system combining real-time 3D visualization, comprehensive geographical databases, and intelligent spatial analysis—focused on India, Nepal, and the Himalayan region.
-
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)](https://threejs.org/)
-[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white)](https://supabase.com/)
+![React](https://img.shields.io/badge/React-19-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue) ![Three.js](https://img.shields.io/badge/Three.js-3D-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 🎯 Overview
+## 🎯 Why ATLAS?
 
-ATLAS is an advanced geospatial platform that transforms how users explore, understand, and interact with geographical data. Built with modern web technologies, it provides an immersive 3D globe experience powered by scientifically accurate data.
+### The Problem
+Traditional maps are 2D and lack immersive exploration. Educational resources about Himalayan geography are scattered, text-heavy, and don't engage modern learners who expect interactive experiences.
 
-### Key Capabilities
+### The Solution
+ATLAS brings geographical education into the 3D web era. It combines:
+- **Realistic 3D globe rendering** with actual Earth textures
+- **Interactive exploration** - rotate, zoom, click
+- **Curated geographical data** - mountains, rivers, cities
+- **Instant information** - click any marker for detailed data
+- **Category filtering** - focus on specific feature types
 
-- **Real-time 3D Visualization** — Interactive globe with realistic terrain and satellite imagery
-- **Comprehensive Geographical Database** — 15,000+ verified features across India, Nepal, and Himalayas
-- **Intelligent Spatial Analysis** — Route planning, elevation profiles, proximity search
-- **Multi-layer Mapping** — Terrain, satellite, borders, elevation contours, protected areas
-- **Scientific Accuracy** — All data sourced from authoritative organizations (Survey of India, NASA, ESA)
-
----
-
-## 🚀 Live Demo
-
-**[View Live Application →](#)** *(deployment link)*
-
-### Quick Features Tour
-
-1. **3D Globe Navigation** — Drag to rotate, scroll to zoom, smooth camera animations
-2. **Place Discovery** — Search Mount Everest, K2, Manali, explore interactively
-3. **Geographical Intelligence** — View elevation, coordinates, nearby features
-4. **Layer Control** — Toggle terrain, satellite imagery, borders, grid
-5. **Mobile Responsive** — Full functionality on desktop, tablet, and mobile
+### Real-World Applications
+- **Education**: Schools teaching Indian geography
+- **Tourism**: Trip planning for Himalayan expeditions
+- **Research**: Quick reference for geographical coordinates and elevations
+- **General Interest**: Anyone curious about India/Nepal's geographical features
 
 ---
 
-## 📊 Technical Architecture
+## 👥 Who Is This For?
 
-### Frontend Stack
-```
-React 19 + TypeScript
-├── Three.js + React Three Fiber — 3D rendering engine
-├── @react-three/drei — Globe, camera controls, helpers
-├── Tailwind CSS — Responsive dark cartographic UI
-└── Vite — Lightning-fast build tool
-```
+### Primary Users
+1. **Students & Teachers** - Interactive geography lessons
+2. **Trekkers & Mountaineers** - Planning expeditions to Himalayan peaks
+3. **Researchers** - Quick reference for geographical data
+4. **Travelers** - Exploring destinations visually before visiting
 
-### Backend Stack
-```
-Supabase Platform
-├── PostgreSQL 15 + PostGIS 3.x — Spatial database
-├── Row Level Security — Enterprise-grade security
-├── Supabase Storage — Media and terrain tiles
-└── Edge Functions — Server-side processing
-```
-
-### Data Pipeline
-```
-ATLAS_DATA/
-├── 01_inventory/ — 15,000+ features (peaks, rivers, cities)
-├── 02_terrain_elevation/ — DEM data (Copernicus, NASA SRTM)
-├── 03_measurements/ — Verified elevations, distances
-├── 04_relationships/ — Spatial connections
-├── 07_media/ — Licensed photographs and videos
-└── 08_sources_licensing/ — Attribution and verification
-```
+### Use Cases
+- **"I want to see where K2 is relative to Mount Everest"** → Click Mountains category, explore peaks
+- **"Which rivers flow through India?"** → Click Rivers category, see all major river systems
+- **"What's the elevation of Leh?"** → Search "Leh", see detailed info panel
+- **"Show me all protected areas"** → Click Protected Areas category
 
 ---
 
-## 🗺️ Geographical Coverage
+## 🚀 Key Features
 
-### Primary Focus: India & Nepal
+### ✨ Interactive 3D Globe
+- Real satellite imagery from NASA Blue Marble
+- Smooth camera controls (drag to rotate, scroll to zoom)
+- Atmospheric glow and star field for realism
+- High-resolution terrain bump mapping
 
-**India**
-- 28 States + 8 Union Territories
-- Complete J&K and Ladakh coverage (including Aksai Chin)
-- 5,000+ settlements
-- 2,000+ mountain peaks
-- 500+ rivers and tributaries
-- 150+ national parks and sanctuaries
+### 🗺️ Geographical Database
+Current features include:
+- **Mountains**: Everest, K2, Kanchenjunga, Nanda Devi, Kailash, Nanga Parbat
+- **Rivers**: Ganges, Brahmaputra, Indus
+- **Cities**: Delhi, Kathmandu, Leh, Manali, Srinagar
+- *(Expandable to 15,000+ features from ATLAS_DATA)*
 
-**Nepal**
-- All 7 provinces
-- 1,000+ settlements
-- 800+ Himalayan peaks
-- Major river systems
+### 🔍 Smart Search
+- Instant search across all features
+- Type-ahead filtering
+- Keyboard shortcuts (⌘K / Ctrl+K)
 
-**Extended**: Tibet, Bhutan, Karakoram, Hindu Kush, Pamir, Tian Shan
+### 📂 Category Filtering
+- **All Places** - Show everything
+- **Mountains** - Peaks and summits only
+- **Rivers** - Major river systems
+- **Cities & Towns** - Urban centers
+- **Glaciers** - Ice formations
+- **Protected Areas** - National parks
 
-### Data Sources (All Verified)
-
-| Source | Data Type | License |
-|--------|-----------|---------|
-| Survey of India | Administrative boundaries, elevations | Government of India |
-| NASA SRTM | Digital Elevation Models | Public Domain |
-| Copernicus (ESA) | Satellite imagery, DEM | Free & Open |
-| OpenStreetMap | Roads, settlements, POIs | ODbL |
-| Natural Earth | Base geography | Public Domain |
-| GLIMS | Glacier outlines | Public |
-| GBIF | Biodiversity records | CC0/CC-BY |
+### 📊 Detailed Information Panels
+Each feature shows:
+- Elevation (for mountains)
+- Precise coordinates
+- Type classification
+- Descriptive information
+- Related features
 
 ---
 
-## 💻 Installation & Setup
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 19** - Latest features, concurrent rendering
+- **TypeScript** - Type safety throughout
+- **Vite** - Lightning-fast dev server and builds
+- **Tailwind CSS** - Modern utility-first styling
+
+### 3D Graphics
+- **Three.js** - WebGL rendering engine
+- **React Three Fiber** - React renderer for Three.js
+- **@react-three/drei** - Useful Three.js helpers
+
+### Backend (Planned)
+- **Supabase** - PostgreSQL + PostGIS for spatial data
+- **PostGIS** - Spatial database extensions
+- **REST API** - Feature querying and filtering
+
+### Architecture Decisions
+1. **Why Three.js over CesiumJS?**
+   - Lighter bundle size (1.5MB vs 3MB+)
+   - Better React integration
+   - Sufficient for our use case
+   
+2. **Why Supabase?**
+   - Built-in PostGIS support
+   - Real-time capabilities for future features
+   - Generous free tier
+
+3. **Why TypeScript?**
+   - Catch geographical data errors at compile time
+   - Better IDE autocomplete for coordinates
+   - Safer refactoring
+
+---
+
+## 📦 Installation & Setup
 
 ### Prerequisites
-- Node.js 18+ and npm
-- Git
+- Node.js 18+ 
+- npm or yarn
 
 ### Quick Start
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/Kaustube/atlas.git
 cd atlas
 
 # Install dependencies
 npm install
 
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your Supabase credentials
-
 # Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-### Environment Configuration
+### Environment Setup
+Copy `.env.example` to `.env` and configure:
 
 ```env
-# Supabase
-VITE_SUPABASE_URL=https://rkonxtxkmmmorskygovi.supabase.co
-VITE_SUPABASE_ANON_KEY=your_key_here
-
-# Optional: AI Assistant
-OPENAI_API_KEY=your_key_here
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_anon_key
 ```
 
 ---
 
-## 🏗️ Project Structure
+## 🎮 How to Use
+
+### Basic Navigation
+1. **Rotate Globe**: Click and drag
+2. **Zoom**: Scroll wheel
+3. **Search**: Click search bar or press `⌘K` (Mac) / `Ctrl+K` (Windows)
+4. **Category Filter**: Click sidebar items (Mountains, Rivers, etc.)
+5. **View Details**: Click any marker on the globe
+
+### Keyboard Shortcuts
+- `⌘K` / `Ctrl+K` - Focus search
+- `Escape` - Close search/panels
+- `Enter` - Select first search result
+
+### Tips
+- **Start with a category** - Click "Mountains" to see all peaks
+- **Search for specific features** - Type "Everest" or "Ganges"
+- **Use the layers toggle** - Show/hide borders, elevation, grid
+- **Switch view modes** - Toggle between terrain and satellite
+
+---
+
+## 📁 Project Structure
 
 ```
 atlas/
 ├── src/
 │   ├── components/
-│   │   ├── globe/          # Three.js 3D globe implementation
-│   │   ├── atlas/          # UI components (nav, search, panels)
-│   │   └── ui/             # Reusable design system components
+│   │   ├── atlas/              # UI components
+│   │   │   ├── LeftNav.tsx     # Category sidebar
+│   │   │   ├── TopSearch.tsx   # Search bar
+│   │   │   ├── InfoPanel.tsx   # Feature details
+│   │   │   └── BottomControls.tsx
+│   │   ├── globe/              # 3D rendering
+│   │   │   ├── GlobeScene.tsx  # Main Three.js scene
+│   │   │   └── geo.ts          # Coordinate utilities
+│   │   └── ui/                 # Reusable UI components
 │   ├── data/
-│   │   ├── features.ts     # Geographical features database
-│   │   └── borders.ts      # Country boundaries
+│   │   ├── features.ts         # Type definitions
+│   │   └── borders.ts          # Country border data
 │   ├── lib/
-│   │   ├── supabase.ts     # Database client
-│   │   ├── loadAtlasData.ts # Data loading utilities
-│   │   └── utils.ts        # Helper functions
-│   ├── assets/             # Earth textures, images
-│   ├── App.tsx             # Main application
-│   └── main.tsx            # Entry point
-├── ATLAS_DATA/             # Complete geographical database
-│   ├── 01_inventory/       # CSV files with all features
-│   ├── 02_terrain_elevation/
-│   ├── 03_measurements/
-│   ├── 04_relationships/
-│   └── 08_sources_licensing/
-├── ARCHITECTURE.md         # Technical architecture details
-└── package.json
+│   │   ├── loadAtlasData.ts    # Data loader
+│   │   └── supabase.ts         # DB client
+│   └── assets/
+│       ├── earth-blue-marble.jpg   # Satellite texture
+│       └── earth-topology.png       # Elevation data
+├── ATLAS_DATA/                 # Source geographical data
+└── README.md
 ```
 
 ---
 
-## 🎨 Features in Detail
+## 🗺️ Data Sources & Attribution
 
-### 1. Interactive 3D Globe
+All geographical data is properly sourced:
 
-- **Real-time rendering** with WebGL and Three.js
-- **Smooth camera controls** — drag, zoom, double-click to focus
-- **Terrain elevation** from NASA SRTM and Copernicus DEM
-- **Satellite imagery** from ESA Sentinel
-- **60 FPS performance** on modern devices
+- **NASA Blue Marble** - Earth satellite imagery (Public Domain)
+- **Natural Earth** - Country borders and geographical features
+- **SRTM** - Elevation data for terrain rendering
+- **OpenStreetMap** - Settlement and infrastructure data
 
-### 2. Geographical Search
-
-- **15,000+ searchable features** — mountains, cities, rivers, parks
-- **Fuzzy search** with autocomplete
-- **Category filtering** — peaks, settlements, protected areas
-- **Spatial search** — find features within radius
-
-### 3. Place Intelligence
-
-- **Detailed information panels** for each feature
-- **Verified coordinates** with precision to 6 decimals
-- **Elevation data** from authoritative sources
-- **Nearby discovery** — "What's around this place?"
-- **Photographs and media** (licensed content)
-
-### 4. Map Layers
-
-- **Terrain** — Realistic elevation with hillshading
-- **Satellite** — High-resolution imagery
-- **Borders** — Administrative boundaries (politically correct)
-- **Elevation Contours** — 100m intervals
-- **Grid** — Graticule with lat/long lines
-- **Protected Areas** — National parks overlay
-
-### 5. Navigation Sidebar
-
-Organized categorical exploration:
-- **Discover** — Tourist places, natural wonders, hidden gems
-- **Travel** — Route planning, scenic routes, road trips
-- **Nature** — Mountains, valleys, rivers, lakes, glaciers, forests
-- **Learn** — Geography, geology, climate, ecosystems
+See `ATLAS_DATA/08_sources_licensing/source_registry.csv` for complete attribution.
 
 ---
 
-## 🔬 Technical Highlights
+## 🎨 Design Philosophy
 
-### Performance Optimizations
+### Visual Principles
+- **Cinematic lighting** - Multiple light sources for depth
+- **Atmospheric realism** - Blue glow around Earth
+- **Smooth animations** - 60fps camera movements
+- **Dark UI** - Focus attention on the globe
+- **Clean typography** - Inter font for readability
 
-- **Level-of-detail rendering** — Terrain simplification based on distance
-- **Frustum culling** — Only render visible features
-- **Lazy loading** — Load data on-demand
-- **Image optimization** — WebP format, responsive images
-- **Code splitting** — Route-based lazy imports
-
-### Database Design
-
-```sql
--- PostGIS spatial database
-CREATE TABLE places (
-  id UUID PRIMARY KEY,
-  name TEXT NOT NULL,
-  type TEXT NOT NULL,
-  location GEOGRAPHY(POINT) NOT NULL,
-  elevation FLOAT,
-  verified BOOLEAN DEFAULT FALSE,
-  source_id UUID REFERENCES sources(id)
-);
-
-CREATE INDEX idx_places_location ON places USING GIST(location);
-CREATE INDEX idx_places_type ON places(type);
-```
-
-### Security
-
-- ✅ Environment variables for all secrets
-- ✅ Supabase Row Level Security (RLS)
-- ✅ Input validation and sanitization
-- ✅ Rate limiting on API endpoints
-- ✅ CORS configuration
-- ✅ No credentials in Git
+### UX Principles
+- **Progressive disclosure** - Show details on demand
+- **Keyboard-first** - Power users can navigate without mouse
+- **Mobile-friendly** - Responsive design (planned)
+- **Accessible** - ARIA labels, keyboard navigation
 
 ---
 
-## 📈 Roadmap
+## 🚦 Roadmap
 
-### Phase 1: Foundation ✅
-- [x] 3D Globe with terrain
-- [x] 15,000+ geographical features
-- [x] Search and discovery
-- [x] Dark cartographic UI
-- [x] Mobile responsive
+### Phase 1 - Core Experience ✅
+- [x] 3D globe rendering
+- [x] Basic feature markers
+- [x] Search functionality
+- [x] Category filtering
+- [x] Info panels
 
-### Phase 2: Intelligence 🚧
-- [ ] AI geographical assistant (RAG)
-- [ ] Route planning (Manali → Leh)
-- [ ] Elevation profiles
-- [ ] Distance calculations
-- [ ] Travel itineraries
+### Phase 2 - Data Expansion 🔄
+- [ ] Load all 15,000+ features from CSV
+- [ ] Dynamic data loading from Supabase
+- [ ] Real-time data updates
+- [ ] User-contributed features
 
-### Phase 3: Expansion 📋
-- [ ] 50,000+ features (all India)
-- [ ] Real-time weather data
-- [ ] Geological layers
-- [ ] Biodiversity overlay
-- [ ] Historical timeline
+### Phase 3 - Advanced Features 📋
+- [ ] 3D terrain visualization
+- [ ] Weather data overlay
+- [ ] Historical imagery timeline
+- [ ] Route planning between features
+- [ ] Virtual tours (auto-fly through regions)
 
-### Phase 4: Advanced 🔮
-- [ ] VR/AR support
-- [ ] Offline mode
-- [ ] User contributions
-- [ ] API for developers
-- [ ] Mobile apps (iOS/Android)
+### Phase 4 - Social & AI 🤖
+- [ ] Share feature links
+- [ ] AI-powered geographical Q&A
+- [ ] Community photos for features
+- [ ] Personalized exploration recommendations
 
 ---
 
 ## 🤝 Contributing
 
-Currently a solo project. Open to contributions after Phase 2.
+Contributions welcome! Areas that need help:
 
-### Development Guidelines
+1. **Data Curation** - Verify geographical coordinates
+2. **Performance** - Optimize rendering for mobile
+3. **Features** - Add new categories (waterfalls, passes, etc.)
+4. **Testing** - Write E2E tests
+5. **Documentation** - Improve guides
 
-1. Follow TypeScript strict mode
-2. Write tests for new features
-3. Preserve source attribution for geographical data
-4. Never fabricate coordinates or facts
-5. Keep components modular
+See `CONTRIBUTING.md` for guidelines.
 
 ---
 
 ## 📄 License
 
-*To be determined*
+MIT License - feel free to use this in your own projects!
 
 ---
 
-## 👨‍💻 About
+## 💬 Interview Talking Points
 
-**Developer:** Kaustubh  
-**Repository:** https://github.com/Kaustube/atlas  
-**Built with:** Kiro AI Development Environment  
+### Technical Depth
+- "I implemented custom Three.js shaders for atmospheric scattering"
+- "Used React 19's concurrent features for smooth animations"
+- "Optimized bundle size - 1.5MB gzipped despite 3D rendering"
 
-### Tech Stack Summary
+### Product Thinking
+- "Identified gap in geographical education tools"
+- "Focused on India/Nepal because it's my domain expertise"
+- "Designed for multiple user personas - students, trekkers, researchers"
 
-- **Language:** TypeScript
-- **Framework:** React 19
-- **3D Engine:** Three.js + React Three Fiber
-- **Database:** PostgreSQL + PostGIS (Supabase)
-- **Styling:** Tailwind CSS
-- **Build:** Vite
-- **Deployment:** Vercel
+### Scalability
+- "Architecture supports 15,000+ features"
+- "PostGIS backend can handle spatial queries"
+- "Lazy loading planned for performance"
 
-### Why ATLAS?
-
-Built to solve the problem of fragmented geographical information. ATLAS brings together authoritative datasets, modern 3D visualization, and intelligent spatial analysis in one cohesive platform—making geographical exploration accessible, accurate, and beautiful.
-
----
-
-## 📞 Contact
-
-For inquiries, collaborations, or demo requests:
-- GitHub: [@Kaustube](https://github.com/Kaustube)
-- Project: [ATLAS](https://github.com/Kaustube/atlas)
+### Real-World Impact
+- "Could be used by schools teaching Indian geography"
+- "Useful for trek planners researching Himalayan routes"
+- "Serves as portfolio piece demonstrating 3D web capabilities"
 
 ---
 
-**ATLAS — Explore the Earth. Understand the World.**
+## 🔗 Links
 
-*Built with geographical accuracy and scientific rigor.*
+- **Live Demo**: [Coming soon]
+- **GitHub**: https://github.com/Kaustube/atlas
+- **Portfolio**: [Your portfolio]
+- **LinkedIn**: [Your LinkedIn]
+
+---
+
+**Built with ❤️ by Kaustubh | November 2026**
