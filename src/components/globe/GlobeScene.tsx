@@ -121,23 +121,24 @@ function Earth({ layers, style }: { layers: GlobeLayers; style: "terrain" | "sat
 
   useMemo(() => {
     map.colorSpace = THREE.SRGBColorSpace;
-    map.anisotropy = 8;
-    bump.anisotropy = 4;
+    map.anisotropy = 16;
+    bump.anisotropy = 16;
   }, [map, bump]);
 
-  const bumpScale = layers.elevation ? 0.07 : style === "terrain" ? 0.035 : 0;
+  // Enhanced bump scale for better 3D effect
+  const bumpScale = layers.elevation ? 0.12 : style === "terrain" ? 0.05 : 0.03;
   const tone =
     style === "terrain" ? new THREE.Color("#a8adb5") : new THREE.Color("#ffffff");
 
   return (
     <mesh>
-      <sphereGeometry args={[GLOBE_R, 96, 96]} />
+      <sphereGeometry args={[GLOBE_R, 128, 128]} />
       <meshStandardMaterial
         map={map}
-        bumpMap={layers.elevation || style === "terrain" ? bump : null}
+        bumpMap={bump}
         bumpScale={bumpScale}
-        roughness={0.94}
-        metalness={0}
+        roughness={0.85}
+        metalness={0.1}
         color={tone}
       />
     </mesh>
@@ -155,7 +156,7 @@ function Atmosphere() {
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         uniforms: {
-          uColor: { value: new THREE.Color("#6d8296") },
+          uColor: { value: new THREE.Color("#5a8fbb") },
         },
         vertexShader: /* glsl */ `
           varying vec3 vNormal;
@@ -168,8 +169,8 @@ function Atmosphere() {
           uniform vec3 uColor;
           varying vec3 vNormal;
           void main() {
-            float intensity = pow(0.58 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 4.0);
-            gl_FragColor = vec4(uColor * intensity, intensity * 0.9);
+            float intensity = pow(0.65 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.5);
+            gl_FragColor = vec4(uColor * intensity, intensity * 1.2);
           }
         `,
       }),
@@ -177,7 +178,7 @@ function Atmosphere() {
   );
 
   return (
-    <mesh scale={1.16}>
+    <mesh scale={1.18}>
       <sphereGeometry args={[GLOBE_R, 64, 64]} />
       <primitive object={material} attach="material" />
     </mesh>
@@ -336,15 +337,18 @@ export default function GlobeScene({ selected, onSelect, layers, style, showMark
       aria-label="Interactive globe"
     >
       <Canvas
-        camera={{ fov: 36, near: 0.1, far: 100, position: [0, 0, 7.4] }}
-        dpr={[1, 2]}
-        gl={{ antialias: true }}
-        onCreated={() => {
+        camera={{ fov: 38, near: 0.1, far: 100, position: [0, 0, 7.4] }}
+        dpr={[1, 2.5]}
+        gl={{ antialias: true, alpha: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.2 }}
+        onCreated={({ gl }) => {
+          gl.setClearColor('#000814', 1);
           wrapperRef.current?.setAttribute("data-scene-ready", "true");
         }}
       >
         <CameraRig target={selected} />
-        <ambientLight intensity={0.55} color="#9fb2c8" />
+        <ambientLight intensity={0.35} color="#8fa3b8" />
+        <directionalLight position={[5, 3, 5]} intensity={1.2} color="#ffffff" />
+        <pointLight position={[-5, -3, -5]} intensity={0.3} color="#6d8296" />
         <Suspense fallback={null}>
           <Earth layers={layers} style={style} />
           <Atmosphere />
@@ -353,13 +357,13 @@ export default function GlobeScene({ selected, onSelect, layers, style, showMark
           {showMarkers && <Markers selected={selected} onSelect={onSelect} />}
         </Suspense>
         <Stars
-          radius={80}
-          depth={30}
-          count={900}
-          factor={1.4}
+          radius={100}
+          depth={50}
+          count={1500}
+          factor={2}
           saturation={0}
           fade
-          speed={0}
+          speed={0.3}
         />
       </Canvas>
     </div>

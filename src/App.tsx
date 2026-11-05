@@ -8,21 +8,21 @@ import { type AtlasFeature } from './data/features'
 
 function App() {
   const [selectedFeature, setSelectedFeature] = useState<AtlasFeature | null>(null)
-  const [style, setStyle] = useState<'terrain' | 'satellite'>('terrain')
+  const [style, setStyle] = useState<'terrain' | 'satellite'>('satellite')
   const [layers, setLayers] = useState<GlobeLayers>({
-    borders: false,
-    elevation: false,
+    borders: true,
+    elevation: true,
     grid: true,
   })
 
-  // Default view - India/Nepal region, no feature selected
+  // Default view - Start with a nice angle showing India/Himalayas
   const defaultView: AtlasFeature = {
     id: 'india-default',
-    name: 'India & Nepal',
+    name: 'India & Himalayas',
     type: 'region',
-    lat: 28.0,
-    lng: 80.0,
-    description: 'Explore geographical features across India and Nepal',
+    lat: 30.0,
+    lng: 85.0,
+    description: 'Explore the majestic Himalayas and Indian subcontinent',
     pin: false,
   }
 
