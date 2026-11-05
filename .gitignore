@@ -1,0 +1,111 @@
+# ATLAS .gitignore
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+
+# Production build
+dist/
+build/
+out/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.key
+*.pem
+secrets/
+credentials/
+
+# IDE and editor files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Raw geographical data (too large for Git - use Git LFS or external storage)
+data/raw/**/*.shp
+data/raw/**/*.tif
+data/raw/**/*.geotiff
+data/raw/**/*.hgt
+data/raw/**/*.nc
+data/raw/**/*.zip
+data/raw/**/*.tar.gz
+
+# Processed data cache
+data/cache/
+data/processed/temp/
+
+# Large geographical assets
+public/terrain/**/*.terrain
+public/imagery/**/*.jpg
+public/imagery/**/*.png
+assets/large/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js (if used)
+.next/
+
+# Vercel
+.vercel
+
+# Turbo
+.turbo
+
+# ESLint
+.eslintcache
+
+# Miscellaneous
+*.bak
+*.orig
+.cache/

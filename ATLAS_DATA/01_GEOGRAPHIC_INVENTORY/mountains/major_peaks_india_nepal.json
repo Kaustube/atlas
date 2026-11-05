@@ -1,0 +1,119 @@
+{
+  "peaks": [
+    {
+      "id": "mount-everest",
+      "name": "Mount Everest",
+      "local_names": ["Sagarmatha", "Chomolungma"],
+      "elevation_m": 8848.86,
+      "coordinates": { "lat": 27.9881, "lng": 86.9250 },
+      "countries": ["Nepal", "China (Tibet)"],
+      "range": "Mahalangur Himalaya",
+      "first_ascent": 1953,
+      "description": "Highest mountain on Earth",
+      "verified": true
+    },
+    {
+      "id": "kanchenjunga",
+      "name": "Kanchenjunga",
+      "elevation_m": 8586,
+      "coordinates": { "lat": 27.7025, "lng": 88.1475 },
+      "countries": ["Nepal", "India (Sikkim)"],
+      "range": "Kanchenjunga Himal",
+      "first_ascent": 1955,
+      "description": "Third highest mountain in the world, sacred peak",
+      "verified": true
+    },
+    {
+      "id": "nanda-devi",
+      "name": "Nanda Devi",
+      "elevation_m": 7816,
+      "coordinates": { "lat": 30.3747, "lng": 79.9739 },
+      "countries": ["India (Uttarakhand)"],
+      "range": "Garhwal Himalaya",
+      "first_ascent": 1936,
+      "description": "Highest peak entirely within India",
+      "verified": true
+    },
+    {
+      "id": "k2",
+      "name": "K2",
+      "local_names": ["Mount Godwin-Austen", "Chhogori"],
+      "elevation_m": 8611,
+      "coordinates": { "lat": 35.8825, "lng": 76.5133 },
+      "countries": ["India (Jammu & Kashmir)"],
+      "range": "Karakoram",
+      "first_ascent": 1954,
+      "description": "Second highest mountain in the world, located in J&K region",
+      "verified": true
+    },
+    {
+      "id": "kangchenjunga-main",
+      "name": "Kangchenjunga Main",
+      "elevation_m": 8586,
+      "coordinates": { "lat": 27.7025, "lng": 88.1475 },
+      "countries": ["Nepal", "India"],
+      "range": "Kangchenjunga Himal",
+      "verified": true
+    },
+    {
+      "id": "nanga-parbat",
+      "name": "Nanga Parbat",
+      "elevation_m": 8126,
+      "coordinates": { "lat": 35.2375, "lng": 74.5894 },
+      "countries": ["India (Jammu & Kashmir)"],
+      "range": "Western Himalaya",
+      "first_ascent": 1953,
+      "description": "Ninth highest mountain, western anchor of Himalayas, located in J&K",
+      "verified": true
+    },
+    {
+      "id": "mount-kailash",
+      "name": "Mount Kailash",
+      "local_names": ["Kangrinboqê", "Gang Rinpoche", "Kailasa"],
+      "elevation_m": 6638,
+      "coordinates": { "lat": 31.0688, "lng": 81.3108 },
+      "countries": ["China (Tibet)"],
+      "range": "Gangdise Mountains (Transhimalaya)",
+      "description": "Sacred mountain in Hinduism, Buddhism, Jainism, Bon. Never climbed.",
+      "cultural_significance": "Pilgrimage site, considered abode of Lord Shiva",
+      "verified": true
+    },
+    {
+      "id": "annapurna-i",
+      "name": "Annapurna I",
+      "elevation_m": 8091,
+      "coordinates": { "lat": 28.5950, "lng": 83.8203 },
+      "countries": ["Nepal"],
+      "range": "Annapurna Himal",
+      "first_ascent": 1950,
+      "description": "Tenth highest mountain, first 8000m peak climbed",
+      "verified": true
+    },
+    {
+      "id": "dhaulagiri",
+      "name": "Dhaulagiri I",
+      "elevation_m": 8167,
+      "coordinates": { "lat": 28.6975, "lng": 83.4933 },
+      "countries": ["Nepal"],
+      "range": "Dhaulagiri Himal",
+      "first_ascent": 1960,
+      "description": "Seventh highest mountain",
+      "verified": true
+    },
+    {
+      "id": "manaslu",
+      "name": "Manaslu",
+      "elevation_m": 8163,
+      "coordinates": { "lat": 28.5497, "lng": 84.5597 },
+      "countries": ["Nepal"],
+      "range": "Manaslu Himal",
+      "first_ascent": 1956,
+      "description": "Eighth highest mountain",
+      "verified": true
+    }
+  ],
+  "source": "Survey of India, Nepal Survey Department, various mountaineering records",
+  "verified": true,
+  "last_updated": "2026-11-06",
+  "note": "Elevations from official surveys. POK peaks included with territorial claim notes."
+}

@@ -1,0 +1,267 @@
+{
+  "states": [
+    {
+      "id": "andhra-pradesh",
+      "name": "Andhra Pradesh",
+      "capital": "Amaravati",
+      "area_km2": 160205,
+      "coordinates": { "lat": 15.9129, "lng": 79.7400 }
+    },
+    {
+      "id": "arunachal-pradesh",
+      "name": "Arunachal Pradesh",
+      "capital": "Itanagar",
+      "area_km2": 83743,
+      "coordinates": { "lat": 28.2180, "lng": 94.7278 }
+    },
+    {
+      "id": "assam",
+      "name": "Assam",
+      "capital": "Dispur",
+      "area_km2": 78438,
+      "coordinates": { "lat": 26.2006, "lng": 92.9376 }
+    },
+    {
+      "id": "bihar",
+      "name": "Bihar",
+      "capital": "Patna",
+      "area_km2": 94163,
+      "coordinates": { "lat": 25.0961, "lng": 85.3131 }
+    },
+    {
+      "id": "chhattisgarh",
+      "name": "Chhattisgarh",
+      "capital": "Raipur",
+      "area_km2": 135192,
+      "coordinates": { "lat": 21.2787, "lng": 81.8661 }
+    },
+    {
+      "id": "goa",
+      "name": "Goa",
+      "capital": "Panaji",
+      "area_km2": 3702,
+      "coordinates": { "lat": 15.2993, "lng": 74.1240 }
+    },
+    {
+      "id": "gujarat",
+      "name": "Gujarat",
+      "capital": "Gandhinagar",
+      "area_km2": 196244,
+      "coordinates": { "lat": 22.2587, "lng": 71.1924 }
+    },
+    {
+      "id": "haryana",
+      "name": "Haryana",
+      "capital": "Chandigarh",
+      "area_km2": 44212,
+      "coordinates": { "lat": 29.0588, "lng": 76.0856 }
+    },
+    {
+      "id": "himachal-pradesh",
+      "name": "Himachal Pradesh",
+      "capital": "Shimla",
+      "area_km2": 55673,
+      "coordinates": { "lat": 31.1048, "lng": 77.1734 },
+      "description": "Himalayan state, gateway to mountains"
+    },
+    {
+      "id": "jharkhand",
+      "name": "Jharkhand",
+      "capital": "Ranchi",
+      "area_km2": 79716,
+      "coordinates": { "lat": 23.6102, "lng": 85.2799 }
+    },
+    {
+      "id": "karnataka",
+      "name": "Karnataka",
+      "capital": "Bengaluru",
+      "area_km2": 191791,
+      "coordinates": { "lat": 15.3173, "lng": 75.7139 }
+    },
+    {
+      "id": "kerala",
+      "name": "Kerala",
+      "capital": "Thiruvananthapuram",
+      "area_km2": 38852,
+      "coordinates": { "lat": 10.8505, "lng": 76.2711 }
+    },
+    {
+      "id": "madhya-pradesh",
+      "name": "Madhya Pradesh",
+      "capital": "Bhopal",
+      "area_km2": 308245,
+      "coordinates": { "lat": 22.9734, "lng": 78.6569 }
+    },
+    {
+      "id": "maharashtra",
+      "name": "Maharashtra",
+      "capital": "Mumbai",
+      "area_km2": 307713,
+      "coordinates": { "lat": 19.7515, "lng": 75.7139 }
+    },
+    {
+      "id": "manipur",
+      "name": "Manipur",
+      "capital": "Imphal",
+      "area_km2": 22327,
+      "coordinates": { "lat": 24.6637, "lng": 93.9063 }
+    },
+    {
+      "id": "meghalaya",
+      "name": "Meghalaya",
+      "capital": "Shillong",
+      "area_km2": 22429,
+      "coordinates": { "lat": 25.4670, "lng": 91.3662 }
+    },
+    {
+      "id": "mizoram",
+      "name": "Mizoram",
+      "capital": "Aizawl",
+      "area_km2": 21081,
+      "coordinates": { "lat": 23.1645, "lng": 92.9376 }
+    },
+    {
+      "id": "nagaland",
+      "name": "Nagaland",
+      "capital": "Kohima",
+      "area_km2": 16579,
+      "coordinates": { "lat": 26.1584, "lng": 94.5624 }
+    },
+    {
+      "id": "odisha",
+      "name": "Odisha",
+      "capital": "Bhubaneswar",
+      "area_km2": 155707,
+      "coordinates": { "lat": 20.9517, "lng": 85.0985 }
+    },
+    {
+      "id": "punjab",
+      "name": "Punjab",
+      "capital": "Chandigarh",
+      "area_km2": 50362,
+      "coordinates": { "lat": 31.1471, "lng": 75.3412 }
+    },
+    {
+      "id": "rajasthan",
+      "name": "Rajasthan",
+      "capital": "Jaipur",
+      "area_km2": 342239,
+      "coordinates": { "lat": 27.0238, "lng": 74.2179 }
+    },
+    {
+      "id": "sikkim",
+      "name": "Sikkim",
+      "capital": "Gangtok",
+      "area_km2": 7096,
+      "coordinates": { "lat": 27.5330, "lng": 88.5122 },
+      "description": "Himalayan state, home to Kanchenjunga"
+    },
+    {
+      "id": "tamil-nadu",
+      "name": "Tamil Nadu",
+      "capital": "Chennai",
+      "area_km2": 130060,
+      "coordinates": { "lat": 11.1271, "lng": 78.6569 }
+    },
+    {
+      "id": "telangana",
+      "name": "Telangana",
+      "capital": "Hyderabad",
+      "area_km2": 112077,
+      "coordinates": { "lat": 18.1124, "lng": 79.0193 }
+    },
+    {
+      "id": "tripura",
+      "name": "Tripura",
+      "capital": "Agartala",
+      "area_km2": 10486,
+      "coordinates": { "lat": 23.9408, "lng": 91.9882 }
+    },
+    {
+      "id": "uttar-pradesh",
+      "name": "Uttar Pradesh",
+      "capital": "Lucknow",
+      "area_km2": 240928,
+      "coordinates": { "lat": 26.8467, "lng": 80.9462 }
+    },
+    {
+      "id": "uttarakhand",
+      "name": "Uttarakhand",
+      "capital": "Dehradun",
+      "area_km2": 53483,
+      "coordinates": { "lat": 30.0668, "lng": 79.0193 },
+      "description": "Himalayan state, pilgrimage sites, mountains"
+    },
+    {
+      "id": "west-bengal",
+      "name": "West Bengal",
+      "capital": "Kolkata",
+      "area_km2": 88752,
+      "coordinates": { "lat": 22.9868, "lng": 87.8550 }
+    }
+  ],
+  "union_territories": [
+    {
+      "id": "andaman-nicobar",
+      "name": "Andaman and Nicobar Islands",
+      "capital": "Port Blair",
+      "area_km2": 8249,
+      "coordinates": { "lat": 11.7401, "lng": 92.6586 }
+    },
+    {
+      "id": "chandigarh",
+      "name": "Chandigarh",
+      "capital": "Chandigarh",
+      "area_km2": 114,
+      "coordinates": { "lat": 30.7333, "lng": 76.7794 }
+    },
+    {
+      "id": "dadra-nagar-haveli-daman-diu",
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "capital": "Daman",
+      "area_km2": 603,
+      "coordinates": { "lat": 20.4283, "lng": 72.8397 }
+    },
+    {
+      "id": "delhi",
+      "name": "Delhi",
+      "capital": "New Delhi",
+      "area_km2": 1484,
+      "coordinates": { "lat": 28.7041, "lng": 77.1025 }
+    },
+    {
+      "id": "jammu-kashmir",
+      "name": "Jammu and Kashmir",
+      "capital": "Srinagar (Summer), Jammu (Winter)",
+      "area_km2": 222236,
+      "coordinates": { "lat": 33.7782, "lng": 76.5762 },
+      "description": "Union Territory, entire J&K region is integral part of India",
+      "note": "Full J&K area including all regions"
+    },
+    {
+      "id": "ladakh",
+      "name": "Ladakh",
+      "capital": "Leh",
+      "area_km2": 96701,
+      "coordinates": { "lat": 34.1526, "lng": 77.5771 },
+      "description": "High-altitude Union Territory, includes Aksai Chin region, separated from J&K in 2019"
+    },
+    {
+      "id": "lakshadweep",
+      "name": "Lakshadweep",
+      "capital": "Kavaratti",
+      "area_km2": 32,
+      "coordinates": { "lat": 10.5667, "lng": 72.6417 }
+    },
+    {
+      "id": "puducherry",
+      "name": "Puducherry",
+      "capital": "Puducherry",
+      "area_km2": 492,
+      "coordinates": { "lat": 11.9416, "lng": 79.8083 }
+    }
+  ],
+  "source": "Survey of India, Government of India",
+  "verified": true,
+  "last_updated": "2026-11-06"
+}

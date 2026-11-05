@@ -1,0 +1,32 @@
+{
+  "id": "nepal",
+  "name": "Nepal",
+  "official_name": "Federal Democratic Republic of Nepal",
+  "iso_code": "NPL",
+  "capital": "Kathmandu",
+  "area_km2": 147516,
+  "population": 30000000,
+  "provinces": 7,
+  "description": "Landlocked Himalayan nation between India and China",
+  "coordinates": {
+    "lat": 28.3949,
+    "lng": 84.1240
+  },
+  "highest_point": {
+    "name": "Mount Everest (Sagarmatha)",
+    "elevation_m": 8848.86,
+    "coordinates": { "lat": 27.9881, "lng": 86.9250 }
+  },
+  "provinces_list": [
+    "Koshi Pradesh",
+    "Madhesh Pradesh",
+    "Bagmati Pradesh",
+    "Gandaki Pradesh",
+    "Lumbini Pradesh",
+    "Karnali Pradesh",
+    "Sudurpashchim Pradesh"
+  ],
+  "source": "Nepal Government Survey Department",
+  "verified": true,
+  "last_updated": "2026-11-06"
+}

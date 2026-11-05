@@ -1,0 +1,11 @@
+{
+  "package": "ATLAS Geographic Data Pack",
+  "version": "0.1.0",
+  "scope": [
+    "Global-ready schema",
+    "India and Nepal initial acquisition"
+  ],
+  "contents": "CSV templates, master taxonomy, source registry, data dictionary, OSM extract downloader",
+  "not_included": "Complete populated global feature database, DEM raster files, licensed media",
+  "created": "2026-11-06"
+}

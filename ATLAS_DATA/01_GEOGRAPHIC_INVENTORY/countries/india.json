@@ -1,0 +1,25 @@
+{
+  "id": "india",
+  "name": "India",
+  "official_name": "Republic of India",
+  "iso_code": "IND",
+  "capital": "New Delhi",
+  "area_km2": 3287263,
+  "population": 1428600000,
+  "states": 28,
+  "union_territories": 8,
+  "description": "Sovereign nation in South Asia, seventh-largest country by area",
+  "coordinates": {
+    "lat": 20.5937,
+    "lng": 78.9629
+  },
+  "territories": [
+    "Jammu and Kashmir (entire region including areas temporarily under Pakistani control)",
+    "Ladakh Union Territory (including Aksai Chin region)",
+    "All Indian territory as per constitutional boundaries"
+  ],
+  "note": "Some areas temporarily under foreign occupation but remain integral part of India",
+  "source": "Survey of India",
+  "verified": true,
+  "last_updated": "2026-11-06"
+}

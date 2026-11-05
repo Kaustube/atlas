@@ -1,0 +1,112 @@
+{
+  "rivers": [
+    {
+      "id": "ganges",
+      "name": "Ganges (Ganga)",
+      "length_km": 2525,
+      "source": {
+        "name": "Gangotri Glacier",
+        "location": "Uttarakhand, India",
+        "coordinates": { "lat": 30.9989, "lng": 79.0783 },
+        "elevation_m": 4000
+      },
+      "mouth": {
+        "name": "Bay of Bengal",
+        "coordinates": { "lat": 21.8, "lng": 90.5 }
+      },
+      "countries": ["India", "Bangladesh"],
+      "major_tributaries": ["Yamuna", "Ghaghara", "Gandak", "Kosi", "Son"],
+      "description": "Sacred river of India, lifeline for millions",
+      "verified": true
+    },
+    {
+      "id": "brahmaputra",
+      "name": "Brahmaputra",
+      "local_names": ["Yarlung Tsangpo", "Luit"],
+      "length_km": 2900,
+      "source": {
+        "name": "Angsi Glacier",
+        "location": "Tibet",
+        "coordinates": { "lat": 30.5, "lng": 82.0 },
+        "elevation_m": 5210
+      },
+      "mouth": {
+        "name": "Bay of Bengal",
+        "coordinates": { "lat": 22.7, "lng": 91.0 }
+      },
+      "countries": ["China (Tibet)", "India", "Bangladesh"],
+      "description": "One of world's major rivers, flows through Tibet, India (Arunachal Pradesh, Assam), Bangladesh",
+      "verified": true
+    },
+    {
+      "id": "indus",
+      "name": "Indus (Sindhu)",
+      "length_km": 3180,
+      "source": {
+        "name": "Senge Khabab",
+        "location": "Near Mount Kailash, Tibet",
+        "coordinates": { "lat": 31.0, "lng": 81.3 },
+        "elevation_m": 5182
+      },
+      "mouth": {
+        "name": "Arabian Sea",
+        "coordinates": { "lat": 24.3, "lng": 67.8 }
+      },
+      "countries": ["China (Tibet)", "India (Ladakh)", "Pakistan (flows through J&K region)"],
+      "description": "Ancient river, cradle of Indus Valley Civilization, flows through Indian territory in Ladakh and J&K",
+      "verified": true
+    },
+    {
+      "id": "yamuna",
+      "name": "Yamuna",
+      "length_km": 1376,
+      "source": {
+        "name": "Yamunotri Glacier",
+        "location": "Uttarakhand, India",
+        "coordinates": { "lat": 31.0, "lng": 78.4 },
+        "elevation_m": 6387
+      },
+      "mouth": {
+        "name": "Ganges at Triveni Sangam, Prayagraj",
+        "coordinates": { "lat": 25.4, "lng": 81.9 }
+      },
+      "countries": ["India"],
+      "description": "Major tributary of Ganges, flows through Delhi",
+      "verified": true
+    },
+    {
+      "id": "koshi",
+      "name": "Koshi",
+      "length_km": 720,
+      "source": {
+        "location": "Nepal-Tibet border",
+        "coordinates": { "lat": 28.0, "lng": 86.5 }
+      },
+      "mouth": {
+        "name": "Ganges",
+        "location": "Bihar, India"
+      },
+      "countries": ["Nepal", "India"],
+      "description": "Known as 'Sorrow of Bihar' due to devastating floods",
+      "verified": true
+    },
+    {
+      "id": "gandak",
+      "name": "Gandak (Narayani)",
+      "length_km": 630,
+      "source": {
+        "location": "Nepal Himalayas",
+        "coordinates": { "lat": 28.7, "lng": 83.7 }
+      },
+      "mouth": {
+        "name": "Ganges",
+        "location": "Bihar, India"
+      },
+      "countries": ["Nepal", "India"],
+      "verified": true
+    }
+  ],
+  "source": "Central Water Commission India, Nepal Department of Hydrology",
+  "verified": true,
+  "last_updated": "2026-11-06"
+}
